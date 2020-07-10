@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+@font-face {
+    font-family: "Arcade";
+    src: local("./ARCADE.TTF"), url("./ARCADE.TTF");
+}
+
+.app-wrapper {
+    position: fixed;
+    display: grid;
+    grid-template-areas: "hdr" "cnt" "ftr";
+    grid-template-rows: 10% 83% 7%;
+    height: 100vh;
+}
+
+.header-wrapper {
+    grid-area: hdr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: url("https://i.imgur.com/LGVMYT6.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: rgb(78, 116, 78);
+    border-bottom: 2px solid rgb(78, 116, 78);
+    /* -webkit-box-shadow: 0px 3px 10px 0px rgb(78, 116, 78);
+    -moz-box-shadow: 0px 3px 10px 0px rgb(78, 116, 78);
+    box-shadow: 0px 3px 10px 0px rgb(78, 116, 78);
+    overflow: visible;
+    z-index: +2; */
+}
+
+.header-title {
+    width: 30%;
+    text-transform: uppercase;
+    font-family: "Arcade";
+    font-size: 4.35em;
+    padding-top: 20px;
+    padding-left: 15px;
+    text-shadow: 2px 2px 3px rgb(187, 74, 74);
+}
+
+nav {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.fa {
+    height: 40px;
+    width: 40px;
+    color: rgb(187, 74, 74);
+    border: 1px solid black;
+    border-radius: 50%;
+    background: rgb(78, 116, 78);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(82, 81, 81), inset 0 3px 4px rgba(255,255,255,.8), inset 0 -3px 4px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(82, 81, 81), inset 0 3px 4px rgba(255,255,255,.8), inset 0 -3px 4px rgba(0,0,0,.7);
+    box-shadow: 0px 1px 2px 0px rgba(82, 81, 81), inset 0 3px 4px rgba(255,255,255,.8), inset 0 -3px 4px rgba(0,0,0,.7);
+}
+
+.fa:hover {
+    cursor: pointer;
+    color: rgb(231, 65, 65);
+    /* box-shadow: 0px 0px 0.5px 1px rgba(82, 81, 81); */
+}
+
+.fa:active {
+    transform: translateY(2px);
+    -webkit-box-shadow: 0px 1px 1px 0px rgb(70, 69, 69), inset 0 2px 5px rgba(0,0,0,.7), inset 0 -2px 3px rgba(255,255,255,.8);
+    -moz-box-shadow: 0px 1px 1px 0px rgb(70, 69, 69), inset 0 2px 5px rgba(0,0,0,.7), inset 0 -2px 3px rgba(255,255,255,.8);
+    box-shadow: 0px 1px 1px 0px rgb(70, 69, 69), inset 0 2px 5px rgba(0,0,0,.7), inset 0 -2px 3px rgba(255,255,255,.8);
+}
+
+.fa-sign-in {
+    padding: 5px;
+    font-size: 1.8em;
+}
+
+.fa-sign-out {
+    padding: 4.5px;
+    padding-left: 7px;
+    font-size: 1.8em;
+}
+
+.fa-play {
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 1.7em;
+}
+
+.fa-home {
+    padding: 3.7px;
+    padding-left: 4.5px;
+    font-size: 1.8em;
+}
+
+.fa-user-plus {
+    padding: 5px;
+    padding-left: 7px;
+    font-size: 1.45em;
+}
+
+.fa-question {
+    padding: 2px;
+    padding-left: 7.5px;
+    font-size: 2.1em;
+}
+
+footer {
+    grid-area: ftr;
+    display: flex;
+    align-items: center;
+    background: url("https://i.imgur.com/LGVMYT6.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding-top: .3vw;
+    font-size: 2.5vw;
+    border-top: 3px black solid;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: rgb(78, 116, 78);
+    border-top: 2px solid rgb(78, 116, 78);
+}
+
+.copyright {
+    padding-left: 5px;
+    font-size: 2.5vw;
+}
+
+.noLine {
+    text-decoration: none;
+    font-size: 2.8vw;
+}
+
+.noLine:hover {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media (max-width: 320px) {
+    .header-title {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .app-wrapper {
+        position: initial;
+        grid-template-rows: 10% 85% 5%;
+    }
+    footer {
+        font-size: 2.5vw;
+        padding-top: .5vw;
+    }
+    .copyright {
+        padding: 0;
+        font-size: 1.3vw;
+    }
+    .noLine {
+        font-size: 1.9vw;
+    }
+    .fa {
+        -webkit-box-shadow: 0px 2px 3px 1px rgba(82, 81, 81), inset 0 5px 6px rgba(255,255,255,.8), inset 0 -5px 5px rgba(0,0,0,.7);
+        -moz-box-shadow: 0px 2px 3px 1px rgba(82, 81, 81), inset 0 5px 6px rgba(255,255,255,.8), inset 0 -5px 5px rgba(0,0,0,.7);
+        box-shadow: 0px 2px 3px 1px rgba(82, 81, 81), inset 0 5px 6px rgba(255,255,255,.8), inset 0 -5px 5px rgba(0,0,0,.7);
+    }
+}
+
+/* safari iOS fix try */
+/* @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation : portrait) {
+    .app-wrapper {
+        height: 80vh;
+    }
+} */
+
+@media only screen and (min-width: 1024px) {
+    .app-wrapper {
+        grid-template-rows: 9% 86% 5%;
+    }
+    footer {
+        font-size: 1.5vw;
+        padding: 0;
+        padding-top: .15vw;
+    }
+    .copyright {
+        padding: 0;
+        font-size: 1.1vw;
+    }
+    .noLine {
+        font-size: 1.3vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 1366px) {
+    .fa {
+        height: 50px;
+        width: 50px;
+    }
+    .fa-sign-in {
+        padding: 4px;
+        padding-left: 5px;
+        font-size: 2.5em;
+    }
+    .fa-user-plus {
+        padding: 6px;
+        padding-left: 7px;
+        font-size: 2em;
+    }
+    .fa-question {
+        padding: 2px;
+        padding-left: 10px;
+        font-size: 2.7em;
+    }
+    .fa-play {
+        padding: 5px;
+        padding-left: 12.5px;
+        font-size: 2.35em;
+    }
+    .fa-home {
+        padding: 3.5px;
+        padding-left: 4.5px;
+        font-size: 2.5em;
+    }
+    .fa-sign-out {
+        padding: 4px;
+        padding-left: 8px;
+        font-size: 2.5em;
+    }
+    footer {
+        font-size: 2vw;
+        padding: 0;
+        padding-top: 1vw;
+    }
+    .copyright {
+        font-size: 1.5vw;
+    }
+    .noLine {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header-title {
+        width: 35%;
+        font-size: 5.5em;
+        padding-top: 25px;
+        padding-left: 80px;
+        text-shadow: 3px 3px 4px rgb(187, 74, 74);
+    }
+    nav {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .fa {
+        height: 50px;
+        width: 50px;
+    }
+    .fa-sign-in {
+        padding: 4px;
+        padding-left: 5px;
+        font-size: 2.5em;
+    }
+    .fa-user-plus {
+        padding: 6px;
+        padding-left: 7px;
+        font-size: 2em;
+    }
+    .fa-question {
+        padding: 2px;
+        padding-left: 10px;
+        font-size: 2.7em;
+    }
+    .fa-play {
+        padding: 5px;
+        padding-left: 12.5px;
+        font-size: 2.35em;
+    }
+    .fa-home {
+        padding: 3.5px;
+        padding-left: 4.5px;
+        font-size: 2.5em;
+    }
+    .fa-sign-out {
+        padding: 4px;
+        padding-left: 8px;
+        font-size: 2.5em;
+    }
+    footer {
+        font-size: 1.2vw;
+        padding-top: .4vw;
+    }
+    .copyright {
+        padding: 0;
+        font-size: .9vw;
+    }
+    .noLine {
+        font-size: 1.2vw;
+    }
+}
+
+@media only screen and (min-width: 1367px) {
+    footer {
+        font-size: 1vw;
+        padding-top: .15vw;
+    }
+    .copyright {
+        padding-left: 5px;
+        padding: 0;
+        font-size: .9vw;
+    }
+    .noLine {
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .header-title {
+        font-size: 8em;
+    }
+    footer {
+        padding-top: .3vw;
+    }
+}

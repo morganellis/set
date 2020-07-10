@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+.rules-wrapper {
+    grid-area: cnt;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    background: url("https://i.imgur.com/LGVMYT6.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-color: rgba(187, 74, 74, 0.699);
+    background-blend-mode: darken;
+    overflow: scroll;
+}
+
+.rules-head {
+    font-family: 'Numans', sans-serif;
+    padding-top: 30px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.rules-subhead {
+    font-family: 'Numans', sans-serif;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.rules-section-head {
+    font-weight: 900px;
+    padding-bottom: 7px;
+    font-size: 1.3em;
+}
+
+.rules-text {
+    font-weight: 600;
+    padding-bottom: 19px;
+    font-size: 1em;
+}
+
+.example-container {
+    display: flex;
+    align-items: center;
+}
+
+.example-sets {
+    width: 70vw;
+}
+
+@media only screen and (min-width: 1200px) {
+    .example-sets {
+        width: 40vw;
+    }
+}

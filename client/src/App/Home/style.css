@@ -1,0 +1,141 @@
+.profile-wrapper {
+    padding: 20px;
+    grid-area: cnt;
+    background: url("https://i.imgur.com/LGVMYT6.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-color: rgba(187, 74, 74, 0.699);
+    background-blend-mode: darken;
+    overflow: scroll;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    color: #9A5EB2;
+    font-size: 6vw;
+}
+
+.welcome h2 {
+    font-family: "Arcade";
+    color: black;
+}
+
+.userName {
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: rgb(97, 143, 97);
+    background-color: white;
+    font-family: "Arcade";
+    font-size: 8vw;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+.userName:hover {
+    color: rgb(187, 74, 74);
+}
+
+.scores-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    padding-left: 50px;
+    background: rgba(138, 82, 160, 0.607);
+    border-radius: 15px;
+    width: 80vw;
+    border: 3px black solid;
+}
+
+.top-title {
+    font-family: "Arcade";
+    font-weight: bold;
+    font-size: 7vw;
+}
+
+.scores-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.one-score {
+    padding: 10px;
+    font-size: 5vw;
+}
+
+.player {
+    font-family: "Arcade";
+    font-weight: bold;
+    font-size: 6.5vw;
+    text-transform: capitalize;
+}
+
+.best-score {
+    font-family: "Arcade";
+}
+
+.best-score span {
+    font-family: "Arcade";
+    color: rgb(97, 143, 97);
+    font-size: 1.5em;
+    line-height: 20px;
+}
+
+.smallAvatar {
+    max-width: 50px;
+    padding-bottom: 3px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 1200px) {
+    .welcome {
+        flex-direction: row;
+        justify-content: left;
+        padding-left: 300px;
+    }
+    .welcome h2 {
+        font-size: 5vw;
+    }
+    .top-title {
+        font-size: 4vw;
+    }
+
+    .one-score {
+        padding: 10px;
+        font-size: 2vw;
+    }
+    .player {
+        font-size: 3vw;
+    }
+    .best-score span {
+        font-size: 1.3em;
+        line-height: 0px;
+    }
+    .scores-container {
+        padding-left: 180px;
+        width: 70vw;
+    }
+    .userName {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 5vw;
+    }
+    .smallAvatar {
+        max-width: 70px;
+    }
+}
