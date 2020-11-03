@@ -13,9 +13,23 @@ const scoresRouter = require("./routes/scoresRouter.js")
 
 const app = express();
 
+// const db = "mongodb://mshiloh:setforset1995@ds133570.mlab.com:33570/set";
+// const db = "mongodb+srv://mshiloh:setforset1995@set.q3nrh.mongodb.net/set?retryWrites=true&w=majority"
+
+//connect to db
+mongoose
+  .connect(
+    process.env.DB,
+    { useUnifiedTopology: true })
+  .then(() => {
+    console.log("🦄  MongoDB is Connected! 🦄");
+  })
+  .catch(() => {
+    console.log("🔥  MongoDB Connection Failed! 🔥");
+  });
+
 //config
 const port = "5050";
-const db = "mongodb://mshiloh:setforset1995@ds133570.mlab.com:33570/set";
 
 //middleware
 app.use(bodyParser.json());
@@ -36,11 +50,5 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-//connect to db
-mongoose.connect(db, (err) => {
-    if (err) console.error(err);
-    console.log("Connected to MongoDB");
-});
-
 //server
-app.listen(port, () => console.log("Server running on port: " + port));
+app.listen(port, () => console.log(`🏃‍  Server running on localhost:${port} 🏃`));
