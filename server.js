@@ -19,7 +19,7 @@ const app = express();
 //connect to db
 mongoose
   .connect(
-    process.env.DB,
+    "mongodb+srv://mshiloh:setforset1995@set.q3nrh.mongodb.net/set?retryWrites=true&w=majority",
     { useUnifiedTopology: true })
   .then(() => {
     console.log("🦄  MongoDB is Connected! 🦄");
@@ -29,7 +29,7 @@ mongoose
   });
 
 //config
-const port = "5050";
+const port = "8080";
 
 //middleware
 app.use(bodyParser.json());
@@ -37,7 +37,7 @@ app.use(logger);
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 //routes below
-app.use("/api", expressJwt({ secret: process.env.SECRET }));
+app.use("/api", expressJwt({ secret: process.env.REACT_APP_SECRET }));
 
 app.use("/api/users", userRouter);
 app.use("/api/cards", cardRouter);
